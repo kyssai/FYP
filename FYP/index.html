@@ -19,62 +19,54 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
-      <div class="auth-actions">
-        <a class="btn secondary" href="login.html">Login</a>
-        <button id="logoutBtn" class="btn danger" type="button">Logout</button>
-      </div>
     </div>
   </header>
 
   <main id="home" class="container">
     <section class="hero card">
-      <div class="section-title-row">
-        <h2>Project Information</h2>
-        <button id="projectInfoEditBtn" class="btn" type="button">Edit Project Info</button>
-      </div>
-      <p id="projectInfoDisplay">
-        This static website reports project information, timeline, and progress updates for our
-        final year project.
+      <h2>Project Information</h2>
+      <p><strong>Project Title:</strong> AI-Powered Virtual Interviewer for Technical &amp; Behavioral Screening</p>
+      <h3>Overview</h3>
+      <p>
+        The global AI recruitment market is expanding rapidly, with companies like Amazon using AI to handle
+        60–70% of initial applicant interactions. In Hong Kong, HR teams face talent shortages and increasing
+        application volumes, creating an urgent need for efficient, fair, and scalable screening solutions.
+        This project develops an innovative AI-powered virtual interviewer that automates the early-stage
+        screening process for both technical and behavioral roles.
       </p>
-      <div id="projectInfoEditorArea" class="editor-area hidden">
-        <label for="projectInfoInput">Edit Project Information</label>
-        <div class="format-toolbar">
-          <button class="btn secondary format-btn" type="button" data-target="projectInfoInput" data-wrap="**">Bold</button>
-          <button class="btn secondary format-btn" type="button" data-target="projectInfoInput" data-wrap="*">Italic</button>
-          <button class="btn secondary format-btn" type="button" data-target="projectInfoInput" data-wrap="__">Underline</button>
-        </div>
-        <textarea id="projectInfoInput" rows="6"></textarea>
-        <div class="editor-actions">
-          <button id="saveProjectInfoBtn" class="btn" type="button">Save</button>
-          <button id="cancelProjectInfoBtn" class="btn secondary" type="button">Cancel</button>
-        </div>
-      </div>
-      <p id="projectInfoHint" class="hint"></p>
     </section>
 
-    <section id="mainContentSection" class="card">
-      <div class="section-title-row">
-        <h2>Main Page Details</h2>
-        <button id="editToggleBtn" class="btn" type="button">Edit Details</button>
-      </div>
-      <p id="mainContentDisplay">
-        Welcome to our FYP website. You can show project overview, objective, methodology, and
-        current status in this section.
+    <section class="card">
+      <h2>Main Page Details</h2>
+
+      <h3>Objectives</h3>
+      <ul>
+        <li>Build an interactive web-based interviewer using Python, Streamlit, and large language model APIs (e.g., GPT-4o).</li>
+        <li>Generate adaptive, role-specific questions—including code challenges for technical roles and STAR-method probes for behavioral roles.</li>
+        <li>Automatically score candidate responses on relevance, technical depth, communication clarity, and cultural alignment.</li>
+        <li>Deliver a shortlist with detailed reports to HR teams, reducing screening time by an estimated 50–80%.</li>
+      </ul>
+
+      <h3>Addressing Key Challenges</h3>
+      <p><strong>Bias Mitigation:</strong> The system anonymizes resumes (removing names, gender cues, and institution names) and uses carefully engineered prompts to focus solely on skills and responses.</p>
+      <p><strong>Privacy Protection:</strong> All interview data is stored locally in an encrypted SQLite database; candidates receive clear bilingual consent notices, and recordings are deleted after transcription, complying with Hong Kong’s PDPO principles.</p>
+
+      <h3>Technical Stack</h3>
+      <ul>
+        <li>Python (FastAPI/Flask) for backend logic</li>
+        <li>Streamlit for rapid UI prototyping</li>
+        <li>OpenAI/Groq APIs for LLM-based conversation and scoring</li>
+        <li>Optional: Whisper for speech-to-text, OpenCV for emotion analysis (future extension)</li>
+      </ul>
+
+      <h3>Expected Outcomes</h3>
+      <p>
+        A fully functional prototype that demonstrates tangible benefits in efficiency, consistency, and objectivity.
+        The project will also produce a bias-testing report and a privacy compliance overview, contributing to the
+        responsible adoption of AI in HR. By the end of the semester, the team will deliver a demo video, a project
+        webpage, and a final report detailing system design, evaluation results, and recommendations for real-world
+        deployment.
       </p>
-      <div id="editorArea" class="editor-area hidden">
-        <label for="mainContentInput">Edit Main Content</label>
-        <div class="format-toolbar">
-          <button class="btn secondary format-btn" type="button" data-target="mainContentInput" data-wrap="**">Bold</button>
-          <button class="btn secondary format-btn" type="button" data-target="mainContentInput" data-wrap="*">Italic</button>
-          <button class="btn secondary format-btn" type="button" data-target="mainContentInput" data-wrap="__">Underline</button>
-        </div>
-        <textarea id="mainContentInput" rows="8"></textarea>
-        <div class="editor-actions">
-          <button id="saveContentBtn" class="btn" type="button">Save</button>
-          <button id="cancelEditBtn" class="btn secondary" type="button">Cancel</button>
-        </div>
-      </div>
-      <p id="editorHint" class="hint"></p>
     </section>
 
   </main>
@@ -87,11 +79,8 @@
         <li><a href="team.html">Team Member</a></li>
         <li><a href="progress.html">Project Progress</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="login.html">Login</a></li>
       </ul>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
