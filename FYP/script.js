@@ -6,6 +6,7 @@
   const CONTACT_KEY = "fypContactContent";
   const TEAM_KEY = "fypTeamMembers";
   const HEADER_KEY = "fypHeaderConfig";
+  const SNAPSHOT_FILE_NAME = "site-content-snapshot.json";
   const DEFAULT_TEAM = [
     {
       name: "CHEUNG CHUN HANG (3036384309)",
@@ -165,6 +166,13 @@
     editBtn.textContent = "Edit Header";
     authActions.appendChild(editBtn);
 
+    const exportBtn = document.createElement("button");
+    exportBtn.type = "button";
+    exportBtn.className = "btn secondary";
+    exportBtn.id = "exportSnapshotBtn";
+    exportBtn.textContent = "Export Snapshot";
+    authActions.appendChild(exportBtn);
+
     const panel = document.createElement("section");
     panel.id = "headerEditorPanel";
     panel.className = "container card editor-area hidden";
@@ -212,8 +220,11 @@
     function refreshState() {
       const loggedIn = isLoggedIn();
       editBtn.classList.toggle("hidden", !loggedIn);
+      exportBtn.classList.toggle("hidden", !loggedIn);
       editBtn.disabled = !loggedIn;
       editBtn.title = loggedIn ? "" : "Please login first";
+      exportBtn.disabled = !loggedIn;
+      exportBtn.title = loggedIn ? "" : "Please login first";
       setMessage(
         hintEl,
         loggedIn ? "You can edit header title and menu now." : "Please login to edit header.",
@@ -222,6 +233,18 @@
       if (!loggedIn) {
         panel.classList.add("hidden");
       }
+    }
+
+    function downloadSnapshotFile(snapshot) {
+      const blob = new Blob([JSON.stringify(snapshot, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = SNAPSHOT_FILE_NAME;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
     }
 
     editBtn.addEventListener("click", function () {
@@ -249,6 +272,29 @@
 
     cancelBtn.addEventListener("click", function () {
       panel.classList.add("hidden");
+    });
+
+    exportBtn.addEventListener("click", function () {
+      if (!isLoggedIn()) return;
+      const snapshot = {
+        exportedAt: new Date().toISOString(),
+        projectInfo: localStorage.getItem(PROJECT_INFO_KEY) || "",
+        mainContent: localStorage.getItem(CONTENT_KEY) || "",
+        contact: localStorage.getItem(CONTACT_KEY) || "",
+        team: (function () {
+          const raw = localStorage.getItem(TEAM_KEY);
+          if (!raw) return DEFAULT_TEAM;
+          try { return JSON.parse(raw); } catch (error) { return DEFAULT_TEAM; }
+        })(),
+        header: readHeaderConfig(),
+        progress: (function () {
+          const raw = localStorage.getItem(PROGRESS_KEY);
+          if (!raw) return DEFAULT_PROGRESS_DATA;
+          try { return JSON.parse(raw); } catch (error) { return DEFAULT_PROGRESS_DATA; }
+        })()
+      };
+      downloadSnapshotFile(snapshot);
+      setMessage(hintEl, "Snapshot exported. Upload this JSON with your website files.", false);
     });
 
     applyHeaderConfig();
