@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FYP Project Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo">
+      <h1 class="site-title">Final Year Project</h1>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">Team Member</a></li>
+          <li><a href="progress.html">Project Progress</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="auth-actions">
+        <a class="btn secondary" href="login.html">Login</a>
+        <button id="logoutBtn" class="btn danger" type="button">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero card">
+      <div class="section-title-row">
+        <h2>Project Information</h2>
+        <button id="projectInfoEditBtn" class="btn" type="button">Edit Project Info</button>
+      </div>
+      <p id="projectInfoDisplay">
+        This static website reports project information, timeline, and progress updates for our
+        final year project.
+      </p>
+      <div id="projectInfoEditorArea" class="editor-area hidden">
+        <label for="projectInfoInput">Edit Project Information</label>
+        <div class="format-toolbar">
+          <button class="btn secondary format-btn" type="button" data-target="projectInfoInput" data-wrap="**">Bold</button>
+          <button class="btn secondary format-btn" type="button" data-target="projectInfoInput" data-wrap="*">Italic</button>
+          <button class="btn secondary format-btn" type="button" data-target="projectInfoInput" data-wrap="__">Underline</button>
+        </div>
+        <textarea id="projectInfoInput" rows="6"></textarea>
+        <div class="editor-actions">
+          <button id="saveProjectInfoBtn" class="btn" type="button">Save</button>
+          <button id="cancelProjectInfoBtn" class="btn secondary" type="button">Cancel</button>
+        </div>
+      </div>
+      <p id="projectInfoHint" class="hint"></p>
+    </section>
+
+    <section id="mainContentSection" class="card">
+      <div class="section-title-row">
+        <h2>Main Page Details</h2>
+        <button id="editToggleBtn" class="btn" type="button">Edit Details</button>
+      </div>
+      <p id="mainContentDisplay">
+        Welcome to our FYP website. You can show project overview, objective, methodology, and
+        current status in this section.
+      </p>
+      <div id="editorArea" class="editor-area hidden">
+        <label for="mainContentInput">Edit Main Content</label>
+        <div class="format-toolbar">
+          <button class="btn secondary format-btn" type="button" data-target="mainContentInput" data-wrap="**">Bold</button>
+          <button class="btn secondary format-btn" type="button" data-target="mainContentInput" data-wrap="*">Italic</button>
+          <button class="btn secondary format-btn" type="button" data-target="mainContentInput" data-wrap="__">Underline</button>
+        </div>
+        <textarea id="mainContentInput" rows="8"></textarea>
+        <div class="editor-actions">
+          <button id="saveContentBtn" class="btn" type="button">Save</button>
+          <button id="cancelEditBtn" class="btn secondary" type="button">Cancel</button>
+        </div>
+      </div>
+      <p id="editorHint" class="hint"></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h3>Site Map</h3>
+      <ul class="sitemap-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team Member</a></li>
+        <li><a href="progress.html">Project Progress</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

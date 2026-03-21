@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Member - FYP Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo">
+      <h1 class="site-title">Final Year Project</h1>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">Team Member</a></li>
+          <li><a href="progress.html">Project Progress</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="auth-actions">
+        <a class="btn secondary" href="login.html">Login</a>
+        <button id="teamLogoutBtn" class="btn danger" type="button">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="section-title-row">
+        <h2>Team Members</h2>
+        <button id="teamEditToggleBtn" class="btn" type="button">Edit Team</button>
+      </div>
+
+      <div class="member-info card">
+        <div class="section-title-row">
+          <h3>Member Information</h3>
+          <button id="memberInfoEditBtn" class="btn" type="button">Edit Member Info</button>
+        </div>
+        <p><strong>Mentor:</strong> <span id="memberInfoMentorText">Professor YIU SIU MING</span></p>
+        <p><strong>Team member:</strong></p>
+        <ul id="memberInfoTeamList">
+          <li>CHEUNG CHUN HANG (3036384309)</li>
+          <li>CHUNG YUE CHEE (3036384189)</li>
+          <li>KWOK WING HING (3036383587)</li>
+          <li>LAU CHIN KEI (3036383771)</li>
+          <li>LEE WAI WA (3036383604)</li>
+        </ul>
+
+        <div id="memberInfoEditorArea" class="editor-area hidden">
+          <label for="memberInfoMentorInput">Mentor</label>
+          <input id="memberInfoMentorInput" type="text">
+          <label for="memberInfoTeamInput">Team Members (one line per member)</label>
+          <textarea id="memberInfoTeamInput" rows="7"></textarea>
+          <div class="editor-actions">
+            <button id="saveMemberInfoBtn" class="btn" type="button">Save Member Info</button>
+            <button id="cancelMemberInfoBtn" class="btn secondary" type="button">Cancel</button>
+          </div>
+        </div>
+        <p id="memberInfoHint" class="hint"></p>
+      </div>
+
+      <div id="teamList" class="team-grid"></div>
+
+      <div id="teamEditorArea" class="editor-area hidden">
+        <h3>Edit Team Member Information</h3>
+        <div id="teamEditorFields" class="team-editor-grid"></div>
+        <div class="editor-actions">
+          <button id="saveTeamBtn" class="btn" type="button">Save Team Info</button>
+          <button id="cancelTeamBtn" class="btn secondary" type="button">Cancel</button>
+        </div>
+      </div>
+      <p id="teamEditorHint" class="hint"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h3>Site Map</h3>
+      <ul class="sitemap-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team Member</a></li>
+        <li><a href="progress.html">Project Progress</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

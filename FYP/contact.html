@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - FYP Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo">
+      <h1 class="site-title">Final Year Project</h1>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">Team Member</a></li>
+          <li><a href="progress.html">Project Progress</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="auth-actions">
+        <a class="btn secondary" href="login.html">Login</a>
+        <button id="contactLogoutBtn" class="btn danger" type="button">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="section-title-row">
+        <h2>Contact Us</h2>
+        <button id="contactEditToggleBtn" class="btn" type="button">Edit Contact</button>
+      </div>
+
+      <p id="contactDisplayText">
+        Email: fyp-team@example.com
+        <br>
+        Phone: +60 12-345 6789
+      </p>
+
+      <div id="contactEditorArea" class="editor-area hidden">
+        <label for="contactInput">Edit Contact Details</label>
+        <div class="format-toolbar">
+          <button class="btn secondary format-btn" type="button" data-target="contactInput" data-wrap="**">Bold</button>
+          <button class="btn secondary format-btn" type="button" data-target="contactInput" data-wrap="*">Italic</button>
+          <button class="btn secondary format-btn" type="button" data-target="contactInput" data-wrap="__">Underline</button>
+        </div>
+        <textarea id="contactInput" rows="6"></textarea>
+        <div class="editor-actions">
+          <button id="saveContactBtn" class="btn" type="button">Save</button>
+          <button id="cancelContactBtn" class="btn secondary" type="button">Cancel</button>
+        </div>
+      </div>
+      <p id="contactEditorHint" class="hint"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h3>Site Map</h3>
+      <ul class="sitemap-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team Member</a></li>
+        <li><a href="progress.html">Project Progress</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

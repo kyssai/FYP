@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Progress - FYP Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo">
+      <h1 class="site-title">Final Year Project</h1>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">Team Member</a></li>
+          <li><a href="progress.html">Project Progress</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="auth-actions">
+        <a class="btn secondary" href="login.html">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="section-title-row">
+        <h2>Project Progress</h2>
+        <button id="progressEditToggleBtn" class="btn" type="button">Edit Progress</button>
+      </div>
+      <div id="progressContentDisplay">
+        <p class="hint">Important deadlines for students to submit their works.</p>
+
+        <div class="table-wrap">
+          <table class="progress-table">
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Deadline (for students to submit their works)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Detailed Project Proposal</td>
+                <td><span class="old-date">March 10, 2026</span> <span class="new-date">March 27, 2026</span></td>
+              </tr>
+              <tr>
+                <td>Project Progress Updates 1</td>
+                <td><span class="old-date">April 7, 2026</span> <span class="new-date">April 14, 2026</span></td>
+              </tr>
+              <tr>
+                <td>Project Progress Updates 2</td>
+                <td>May 5, 2026</td>
+              </tr>
+              <tr>
+                <td>Interim Report and Presentation</td>
+                <td>June 1, 2026</td>
+              </tr>
+              <tr>
+                <td>Project Progress Updates 3</td>
+                <td>June 16, 2026</td>
+              </tr>
+              <tr>
+                <td>Project Progress Updates 4</td>
+                <td>July 6, 2026</td>
+              </tr>
+              <tr>
+                <td>Project Webpage</td>
+                <td>July 13, 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrap">
+          <table class="progress-table">
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Deadline</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Oral Examination</td>
+                <td>End of July 2026</td>
+              </tr>
+              <tr>
+                <td>Project Report</td>
+                <td>July 17, 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="progressEditorArea" class="editor-area hidden">
+        <h3>Edit Project Progress</h3>
+        <div id="progressEditorFields" class="progress-editor-grid"></div>
+        <div class="editor-actions">
+          <button id="saveProgressBtn" class="btn" type="button">Save</button>
+          <button id="cancelProgressBtn" class="btn secondary" type="button">Cancel</button>
+        </div>
+      </div>
+      <p id="progressEditorHint" class="hint"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h3>Site Map</h3>
+      <ul class="sitemap-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team Member</a></li>
+        <li><a href="progress.html">Project Progress</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
