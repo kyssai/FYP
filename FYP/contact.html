@@ -3,47 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - FYP Website</title>
+  <title data-i18n="page_title_contact">Contact Us - FYP Website</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-wrap">
-      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo">
-      <h1 class="site-title">Final Year Project</h1>
+      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo" data-i18n-attr="alt:logo_alt">
+      <h1 class="site-title" data-i18n="site_title">Final Year Project</h1>
       <nav aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="team.html">Team Member</a></li>
-          <li><a href="progress.html">Project Progress</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="team.html" data-i18n="nav_team">Team Member</a></li>
+          <li><a href="progress.html" data-i18n="nav_progress">Project Progress</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
         </ul>
       </nav>
+      <div class="header-control-bar" role="toolbar" aria-label="Display settings">
+        <div class="header-controls-group">
+          <span class="header-controls-label" data-i18n="label_font">Text size</span>
+          <button type="button" class="header-control-btn" data-action="font" data-value="sm" aria-pressed="false" title="Small">A-</button>
+          <button type="button" class="header-control-btn" data-action="font" data-value="md" aria-pressed="true" title="Medium">A</button>
+          <button type="button" class="header-control-btn" data-action="font" data-value="lg" aria-pressed="false" title="Large">A+</button>
+        </div>
+        <div class="header-controls-group">
+          <span class="header-controls-label" data-i18n="label_lang">Language</span>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="zh-TW" aria-pressed="false">繁</button>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="zh-CN" aria-pressed="false">简</button>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="en" aria-pressed="true">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <section class="card">
-      <h2>Contact Us</h2>
+      <h2 data-i18n="h2_contact_us">Contact Us</h2>
 
       <p>
-        Email: fyp-team@example.com
+        <span data-i18n="contact_email_line">Email: u3638360@connect.hku.hk</span>
         <br>
-        Phone: +60 12-345 6789
+        <span data-i18n="contact_phone_line">Phone: +852 60730930</span>
       </p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <h3>Site Map</h3>
+      <h3 data-i18n="footer_sitemap">Site Map</h3>
       <ul class="sitemap-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Team Member</a></li>
-        <li><a href="progress.html">Project Progress</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="team.html" data-i18n="nav_team">Team Member</a></li>
+        <li><a href="progress.html" data-i18n="nav_progress">Project Progress</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
       </ul>
+      <div class="footer-note-icon">
+        <img
+          class="footer-hku-img"
+          src="IMG/hku_foot.png"
+          alt="University of Hong Kong"
+          loading="lazy"
+          data-i18n-attr="alt:footer_hku_icon_alt"
+        >
+      </div>
+      <p class="footer-copyright" data-i18n="footer_copyright">© COMP7705 MSc(CompSc) Project [2025] University of Hong Kong (HKU)</p>
     </div>
   </footer>
+  <script src="header-controls.js"></script>
 </body>
 </html>

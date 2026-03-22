@@ -3,33 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team Member - FYP Website</title>
+  <title data-i18n="page_title_team">Team Member - FYP Website</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-wrap">
-      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo">
-      <h1 class="site-title">Final Year Project</h1>
+      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo" data-i18n-attr="alt:logo_alt">
+      <h1 class="site-title" data-i18n="site_title">Final Year Project</h1>
       <nav aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="team.html">Team Member</a></li>
-          <li><a href="progress.html">Project Progress</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="team.html" data-i18n="nav_team">Team Member</a></li>
+          <li><a href="progress.html" data-i18n="nav_progress">Project Progress</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
         </ul>
       </nav>
+      <div class="header-control-bar" role="toolbar" aria-label="Display settings">
+        <div class="header-controls-group">
+          <span class="header-controls-label" data-i18n="label_font">Text size</span>
+          <button type="button" class="header-control-btn" data-action="font" data-value="sm" aria-pressed="false" title="Small">A-</button>
+          <button type="button" class="header-control-btn" data-action="font" data-value="md" aria-pressed="true" title="Medium">A</button>
+          <button type="button" class="header-control-btn" data-action="font" data-value="lg" aria-pressed="false" title="Large">A+</button>
+        </div>
+        <div class="header-controls-group">
+          <span class="header-controls-label" data-i18n="label_lang">Language</span>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="zh-TW" aria-pressed="false">繁</button>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="zh-CN" aria-pressed="false">简</button>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="en" aria-pressed="true">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <section class="card">
-      <h2>Team Members</h2>
+      <h2 data-i18n="h2_team_members">Team Members</h2>
 
       <div class="member-info card">
-        <h3>Member Information</h3>
-        <p><strong>Mentor:</strong> Professor YIU SIU MING</p>
-        <p><strong>Team member:</strong></p>
+        <h3 data-i18n="h3_member_info">Member Information</h3>
+        <p><strong data-i18n="label_mentor">Mentor:</strong> Professor YIU SIU MING</p>
+        <p><strong data-i18n="label_team_member">Team member:</strong></p>
         <ul>
           <li>CHEUNG CHUN HANG (3036384309)</li>
           <li>CHUNG YUE CHEE (3036384189)</li>
@@ -41,41 +55,41 @@
 
       <div class="team-grid">
         <article class="team-card mentor-card">
-          <span class="mentor-badge">MENTOR</span>
+          <span class="mentor-badge" data-i18n="team_badge_mentor">MENTOR</span>
           <img class="team-photo" src="IMG/men1.png" alt="Professor YIU SIU MING photo">
           <h3>Professor YIU SIU MING</h3>
-          <p class="team-role mentor-role">Mentor</p>
-          <p>Project mentor and academic advisor.</p>
+          <p class="team-role mentor-role" data-i18n="team_role_mentor">Mentor</p>
+          <p data-i18n="team_desc_mentor">Project mentor and academic advisor.</p>
         </article>
         <article class="team-card">
           <img class="team-photo" src="IMG/mem1.png" alt="CHEUNG CHUN HANG photo">
           <h3>CHEUNG CHUN HANG (3036384309)</h3>
-          <p class="team-role">Team Member</p>
-          <p>Final year project team member.</p>
+          <p class="team-role" data-i18n="team_role_member">Team Member</p>
+          <p data-i18n="team_desc_member">Final year project team member.</p>
         </article>
         <article class="team-card">
           <img class="team-photo" src="IMG/mem2.png" alt="CHUNG YUE CHEE photo">
           <h3>CHUNG YUE CHEE (3036384189)</h3>
-          <p class="team-role">Team Member</p>
-          <p>Final year project team member.</p>
+          <p class="team-role" data-i18n="team_role_member">Team Member</p>
+          <p data-i18n="team_desc_member">Final year project team member.</p>
         </article>
         <article class="team-card">
           <img class="team-photo" src="IMG/mem3.png" alt="KWOK WING HING photo">
           <h3>KWOK WING HING (3036383587)</h3>
-          <p class="team-role">Team Member</p>
-          <p>Final year project team member.</p>
+          <p class="team-role" data-i18n="team_role_member">Team Member</p>
+          <p data-i18n="team_desc_member">Final year project team member.</p>
         </article>
         <article class="team-card">
           <img class="team-photo" src="IMG/mem4.png" alt="LAU CHIN KEI photo">
           <h3>LAU CHIN KEI (3036383771)</h3>
-          <p class="team-role">Team Member</p>
-          <p>Final year project team member.</p>
+          <p class="team-role" data-i18n="team_role_member">Team Member</p>
+          <p data-i18n="team_desc_member">Final year project team member.</p>
         </article>
         <article class="team-card">
           <img class="team-photo" src="IMG/mem5.png" alt="LEE WAI WA photo">
           <h3>LEE WAI WA (3036383604)</h3>
-          <p class="team-role">Team Member</p>
-          <p>Final year project team member.</p>
+          <p class="team-role" data-i18n="team_role_member">Team Member</p>
+          <p data-i18n="team_desc_member">Final year project team member.</p>
         </article>
       </div>
     </section>
@@ -83,14 +97,25 @@
 
   <footer class="site-footer">
     <div class="container">
-      <h3>Site Map</h3>
+      <h3 data-i18n="footer_sitemap">Site Map</h3>
       <ul class="sitemap-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Team Member</a></li>
-        <li><a href="progress.html">Project Progress</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="team.html" data-i18n="nav_team">Team Member</a></li>
+        <li><a href="progress.html" data-i18n="nav_progress">Project Progress</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
       </ul>
+      <div class="footer-note-icon">
+        <img
+          class="footer-hku-img"
+          src="IMG/hku_foot.png"
+          alt="University of Hong Kong"
+          loading="lazy"
+          data-i18n-attr="alt:footer_hku_icon_alt"
+        >
+      </div>
+      <p class="footer-copyright" data-i18n="footer_copyright">© COMP7705 MSc(CompSc) Project [2025] University of Hong Kong (HKU)</p>
     </div>
   </footer>
+  <script src="header-controls.js"></script>
 </body>
 </html>

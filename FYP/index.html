@@ -3,84 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FYP Project Website</title>
+  <title data-i18n="page_title_home">FYP Project Website</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-wrap">
-      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo">
-      <h1 class="site-title">Final Year Project</h1>
+      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo" data-i18n-attr="alt:logo_alt">
+      <h1 class="site-title" data-i18n="site_title">Final Year Project</h1>
       <nav aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="team.html">Team Member</a></li>
-          <li><a href="progress.html">Project Progress</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="team.html" data-i18n="nav_team">Team Member</a></li>
+          <li><a href="progress.html" data-i18n="nav_progress">Project Progress</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
         </ul>
       </nav>
+      <div class="header-control-bar" role="toolbar" aria-label="Display settings">
+        <div class="header-controls-group">
+          <span class="header-controls-label" data-i18n="label_font">Text size</span>
+          <button type="button" class="header-control-btn" data-action="font" data-value="sm" aria-pressed="false" title="Small">A-</button>
+          <button type="button" class="header-control-btn" data-action="font" data-value="md" aria-pressed="true" title="Medium">A</button>
+          <button type="button" class="header-control-btn" data-action="font" data-value="lg" aria-pressed="false" title="Large">A+</button>
+        </div>
+        <div class="header-controls-group">
+          <span class="header-controls-label" data-i18n="label_lang">Language</span>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="zh-TW" aria-pressed="false">繁</button>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="zh-CN" aria-pressed="false">简</button>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="en" aria-pressed="true">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <main id="home" class="container">
     <section class="hero card">
-      <h2>Project Information</h2>
-      <p><strong>Project Title:</strong> AI-Powered Virtual Interviewer for Technical &amp; Behavioral Screening</p>
-      <h3>Overview</h3>
-      <p>
-        The global AI recruitment market is expanding rapidly, with companies like Amazon using AI to handle
-        60–70% of initial applicant interactions. In Hong Kong, HR teams face talent shortages and increasing
-        application volumes, creating an urgent need for efficient, fair, and scalable screening solutions.
-        This project develops an innovative AI-powered virtual interviewer that automates the early-stage
-        screening process for both technical and behavioral roles.
-      </p>
+      <h2 data-i18n="h2_project_information">Project Information</h2>
+      <div class="project-info-split">
+        <div class="project-info-text">
+          <p><strong data-i18n="project_title_label">Project Title:</strong> <span data-i18n="home_project_name">AI-Powered Virtual Interviewer for Technical &amp; Behavioral Screening</span></p>
+          <h3 data-i18n="h3_overview">Overview</h3>
+          <p data-i18n="home_overview_p">
+            The global AI recruitment market is expanding rapidly, with companies like Amazon using AI to handle
+            60–70% of initial applicant interactions. In Hong Kong, HR teams face talent shortages and increasing
+            application volumes, creating an urgent need for efficient, fair, and scalable screening solutions.
+            This project develops an innovative AI-powered virtual interviewer that automates the early-stage
+            screening process for both technical and behavioral roles.
+          </p>
+        </div>
+        <figure class="figure-overview">
+          <img
+            class="overview-img"
+            src="IMG/overview.png"
+            alt="Project overview"
+            loading="lazy"
+            data-i18n-attr="alt:img_overview_alt"
+          >
+        </figure>
+      </div>
     </section>
 
     <section class="card">
-      <h2>Main Page Details</h2>
+      <h2 data-i18n="h2_main_details">Main Page Details</h2>
 
-      <h3>Objectives</h3>
-      <ul>
-        <li>Build an interactive web-based interviewer using Python, Streamlit, and large language model APIs (e.g., GPT-4o).</li>
-        <li>Generate adaptive, role-specific questions—including code challenges for technical roles and STAR-method probes for behavioral roles.</li>
-        <li>Automatically score candidate responses on relevance, technical depth, communication clarity, and cultural alignment.</li>
-        <li>Deliver a shortlist with detailed reports to HR teams, reducing screening time by an estimated 50–80%.</li>
-      </ul>
+      <div class="objectives-split">
+        <div class="objectives-text">
+          <h3 data-i18n="h3_objectives">Objectives</h3>
+          <ul>
+            <li data-i18n="home_obj_1">Build an interactive web-based interviewer using Python, Streamlit, and large language model APIs (e.g., GPT-4o).</li>
+            <li data-i18n="home_obj_2">Generate adaptive, role-specific questions—including code challenges for technical roles and STAR-method probes for behavioral roles.</li>
+            <li data-i18n="home_obj_3">Automatically score candidate responses on relevance, technical depth, communication clarity, and cultural alignment.</li>
+            <li data-i18n="home_obj_4">Deliver a shortlist with detailed reports to HR teams, reducing screening time by an estimated 50–80%.</li>
+          </ul>
+        </div>
+        <figure class="figure-objectives">
+          <img
+            class="objectives-img"
+            src="IMG/objectives.png"
+            alt="Project objectives"
+            loading="lazy"
+            data-i18n-attr="alt:img_objectives_alt"
+          >
+        </figure>
+      </div>
 
-      <h3>Addressing Key Challenges</h3>
-      <p><strong>Bias Mitigation:</strong> The system anonymizes resumes (removing names, gender cues, and institution names) and uses carefully engineered prompts to focus solely on skills and responses.</p>
-      <p><strong>Privacy Protection:</strong> All interview data is stored locally in an encrypted SQLite database; candidates receive clear bilingual consent notices, and recordings are deleted after transcription, complying with Hong Kong’s PDPO principles.</p>
+      <div class="challenges-split">
+        <figure class="figure-challenges">
+          <img
+            class="challenges-img"
+            src="IMG/challenges.png"
+            alt="Key challenges"
+            loading="lazy"
+            data-i18n-attr="alt:img_challenges_alt"
+          >
+        </figure>
+        <div class="challenges-text">
+          <h3 data-i18n="h3_challenges">Addressing Key Challenges</h3>
+          <p><strong data-i18n="home_bias_label">Bias Mitigation:</strong> <span data-i18n="home_bias_body">The system anonymizes resumes (removing names, gender cues, and institution names) and uses carefully engineered prompts to focus solely on skills and responses.</span></p>
+          <p><strong data-i18n="home_privacy_label">Privacy Protection:</strong> <span data-i18n="home_privacy_body">All interview data is stored locally in an encrypted SQLite database; candidates receive clear bilingual consent notices, and recordings are deleted after transcription, complying with Hong Kong’s PDPO principles.</span></p>
+        </div>
+      </div>
 
-      <h3>Technical Stack</h3>
-      <ul>
-        <li>Python (FastAPI/Flask) for backend logic</li>
-        <li>Streamlit for rapid UI prototyping</li>
-        <li>OpenAI/Groq APIs for LLM-based conversation and scoring</li>
-        <li>Optional: Whisper for speech-to-text, OpenCV for emotion analysis (future extension)</li>
-      </ul>
+      <div class="technical-split">
+        <figure class="figure-technical">
+          <img
+            class="technical-img"
+            src="IMG/technical.png"
+            alt="Technical stack"
+            loading="lazy"
+            data-i18n-attr="alt:img_technical_alt"
+          >
+        </figure>
+        <div class="technical-text">
+          <h3 data-i18n="h3_technical_stack">Technical Stack</h3>
+          <ul>
+            <li data-i18n="home_ts_1">Python (FastAPI/Flask) for backend logic</li>
+            <li data-i18n="home_ts_2">Streamlit for rapid UI prototyping</li>
+            <li data-i18n="home_ts_3">OpenAI/Groq APIs for LLM-based conversation and scoring</li>
+            <li data-i18n="home_ts_4">Optional: Whisper for speech-to-text, OpenCV for emotion analysis (future extension)</li>
+          </ul>
+        </div>
+      </div>
 
-      <h3>Expected Outcomes</h3>
-      <p>
-        A fully functional prototype that demonstrates tangible benefits in efficiency, consistency, and objectivity.
-        The project will also produce a bias-testing report and a privacy compliance overview, contributing to the
-        responsible adoption of AI in HR. By the end of the semester, the team will deliver a demo video, a project
-        webpage, and a final report detailing system design, evaluation results, and recommendations for real-world
-        deployment.
-      </p>
+      <div class="outcomes-split">
+        <div class="outcomes-text">
+          <h3 data-i18n="h3_expected_outcomes">Expected Outcomes</h3>
+          <p data-i18n="home_outcomes_p">
+            A fully functional prototype that demonstrates tangible benefits in efficiency, consistency, and objectivity.
+            The project will also produce a bias-testing report and a privacy compliance overview, contributing to the
+            responsible adoption of AI in HR. By the end of the semester, the team will deliver a demo video, a project
+            webpage, and a final report detailing system design, evaluation results, and recommendations for real-world
+            deployment.
+          </p>
+        </div>
+        <figure class="figure-outcomes">
+          <img
+            class="outcomes-img"
+            src="IMG/outcomes.png"
+            alt="Expected outcomes"
+            loading="lazy"
+            data-i18n-attr="alt:img_outcomes_alt"
+          >
+        </figure>
+      </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <h3>Site Map</h3>
+      <h3 data-i18n="footer_sitemap">Site Map</h3>
       <ul class="sitemap-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Team Member</a></li>
-        <li><a href="progress.html">Project Progress</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="team.html" data-i18n="nav_team">Team Member</a></li>
+        <li><a href="progress.html" data-i18n="nav_progress">Project Progress</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
       </ul>
+      <div class="footer-note-icon">
+        <img
+          class="footer-hku-img"
+          src="IMG/hku_foot.png"
+          alt="University of Hong Kong"
+          loading="lazy"
+          data-i18n-attr="alt:footer_hku_icon_alt"
+        >
+      </div>
+      <p class="footer-copyright" data-i18n="footer_copyright">© COMP7705 MSc(CompSc) Project [2025] University of Hong Kong (HKU)</p>
     </div>
   </footer>
+  <script src="header-controls.js"></script>
 </body>
 </html>

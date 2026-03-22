@@ -3,66 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Progress - FYP Website</title>
+  <title data-i18n="page_title_progress">Project Progress - FYP Website</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-wrap">
-      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo">
-      <h1 class="site-title">Final Year Project</h1>
+      <img class="header-logo" src="IMG/hku.png" alt="HKU Logo" data-i18n-attr="alt:logo_alt">
+      <h1 class="site-title" data-i18n="site_title">Final Year Project</h1>
       <nav aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="team.html">Team Member</a></li>
-          <li><a href="progress.html">Project Progress</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="team.html" data-i18n="nav_team">Team Member</a></li>
+          <li><a href="progress.html" data-i18n="nav_progress">Project Progress</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
         </ul>
       </nav>
+      <div class="header-control-bar" role="toolbar" aria-label="Display settings">
+        <div class="header-controls-group">
+          <span class="header-controls-label" data-i18n="label_font">Text size</span>
+          <button type="button" class="header-control-btn" data-action="font" data-value="sm" aria-pressed="false" title="Small">A-</button>
+          <button type="button" class="header-control-btn" data-action="font" data-value="md" aria-pressed="true" title="Medium">A</button>
+          <button type="button" class="header-control-btn" data-action="font" data-value="lg" aria-pressed="false" title="Large">A+</button>
+        </div>
+        <div class="header-controls-group">
+          <span class="header-controls-label" data-i18n="label_lang">Language</span>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="zh-TW" aria-pressed="false">繁</button>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="zh-CN" aria-pressed="false">简</button>
+          <button type="button" class="header-control-btn" data-action="lang" data-value="en" aria-pressed="true">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <section class="card">
-      <h2>Project Progress</h2>
-      <p class="hint">Important deadlines for students to submit their works.</p>
+      <h2 data-i18n="h2_project_progress">Project Progress</h2>
+      <p class="hint" data-i18n="hint_deadlines">Important deadlines for students to submit their works.</p>
 
       <div class="table-wrap">
         <table class="progress-table">
           <thead>
             <tr>
-              <th>Task</th>
-              <th>Deadline (for students to submit their works)</th>
+              <th data-i18n="th_task">Task</th>
+              <th data-i18n="th_deadline_submit">Deadline (for students to submit their works)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Detailed Project Proposal</td>
-              <td><span class="old-date">March 10, 2026</span> <span class="new-date">March 27, 2026</span></td>
+              <td class="task-cell">
+                <div class="task-title" data-i18n="prog_r1_task">Detailed Project Proposal</div>
+                <a
+                  id="pdf-dpp"
+                  class="download-link"
+                  href="Source/Detailed%20Project%20Proposal.pdf"
+                  download="Detailed Project Proposal.pdf"
+                  data-i18n="label_download_pdf"
+                >Download PDF</a>
+              </td>
+              <td><span class="old-date" data-i18n="prog_r1_d1">March 10, 2026</span> <span class="new-date" data-i18n="prog_r1_d2">March 27, 2026</span></td>
             </tr>
             <tr>
-              <td>Project Progress Updates 1</td>
-              <td><span class="old-date">April 7, 2026</span> <span class="new-date">April 14, 2026</span></td>
+              <td data-i18n="prog_r2_task">Project Progress Updates 1</td>
+              <td><span class="old-date" data-i18n="prog_r2_d1">April 7, 2026</span> <span class="new-date" data-i18n="prog_r2_d2">April 14, 2026</span></td>
             </tr>
             <tr>
-              <td>Project Progress Updates 2</td>
-              <td>May 5, 2026</td>
+              <td data-i18n="prog_r3_task">Project Progress Updates 2</td>
+              <td data-i18n="prog_r3_d1">May 5, 2026</td>
             </tr>
             <tr>
-              <td>Interim Report and Presentation</td>
-              <td>June 1, 2026</td>
+              <td data-i18n="prog_r4_task">Interim Report and Presentation</td>
+              <td data-i18n="prog_r4_d1">June 1, 2026</td>
             </tr>
             <tr>
-              <td>Project Progress Updates 3</td>
-              <td>June 16, 2026</td>
+              <td data-i18n="prog_r5_task">Project Progress Updates 3</td>
+              <td data-i18n="prog_r5_d1">June 16, 2026</td>
             </tr>
             <tr>
-              <td>Project Progress Updates 4</td>
-              <td>July 6, 2026</td>
+              <td data-i18n="prog_r6_task">Project Progress Updates 4</td>
+              <td data-i18n="prog_r6_d1">July 6, 2026</td>
             </tr>
             <tr>
-              <td>Project Webpage</td>
-              <td>July 13, 2026</td>
+              <td data-i18n="prog_r7_task">Project Webpage</td>
+              <td data-i18n="prog_r7_d1">July 13, 2026</td>
             </tr>
           </tbody>
         </table>
@@ -72,18 +95,18 @@
         <table class="progress-table">
           <thead>
             <tr>
-              <th>Task</th>
-              <th>Deadline</th>
+              <th data-i18n="th_task">Task</th>
+              <th data-i18n="th_deadline">Deadline</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Oral Examination</td>
-              <td>End of July 2026</td>
+              <td data-i18n="prog_r8_task">Oral Examination</td>
+              <td data-i18n="prog_r8_d1">End of July 2026</td>
             </tr>
             <tr>
-              <td>Project Report</td>
-              <td>July 17, 2026</td>
+              <td data-i18n="prog_r9_task">Project Report</td>
+              <td data-i18n="prog_r9_d1">July 17, 2026</td>
             </tr>
           </tbody>
         </table>
@@ -93,14 +116,34 @@
 
   <footer class="site-footer">
     <div class="container">
-      <h3>Site Map</h3>
+      <h3 data-i18n="footer_sitemap">Site Map</h3>
       <ul class="sitemap-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Team Member</a></li>
-        <li><a href="progress.html">Project Progress</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="team.html" data-i18n="nav_team">Team Member</a></li>
+        <li><a href="progress.html" data-i18n="nav_progress">Project Progress</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
       </ul>
+      <div class="footer-note-icon">
+        <img
+          class="footer-hku-img"
+          src="IMG/hku_foot.png"
+          alt="University of Hong Kong"
+          loading="lazy"
+          data-i18n-attr="alt:footer_hku_icon_alt"
+        >
+      </div>
+      <p class="footer-copyright" data-i18n="footer_copyright">© COMP7705 MSc(CompSc) Project [2025] University of Hong Kong (HKU)</p>
     </div>
   </footer>
+  <script src="site-config.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var a = document.getElementById("pdf-dpp");
+      if (a && typeof window.fypAsset === "function") {
+        a.href = fypAsset("Source/Detailed%20Project%20Proposal.pdf");
+      }
+    });
+  </script>
+  <script src="header-controls.js"></script>
 </body>
 </html>
