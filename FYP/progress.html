@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    main img, .site-footer img { max-width: 100%; height: auto; }
+    .footer-hku-img { max-height: 120px; }
+    .project-info-split > *, .objectives-split > *, .challenges-split > *, .technical-split > *, .outcomes-split > * { min-width: 0; }
+  </style>
   <title data-i18n="page_title_progress">Project Progress - FYP Website</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -64,11 +69,30 @@
               <td><span class="old-date" data-i18n="prog_r1_d1">March 10, 2026</span> <span class="new-date" data-i18n="prog_r1_d2">March 27, 2026</span></td>
             </tr>
             <tr>
-              <td data-i18n="prog_r2_task">Project Progress Updates 1</td>
+              <td class="task-cell">
+                <a class="task-title progress-jump-link" href="#progress-update-1" data-i18n="prog_r2_task">Project Progress Updates 1</a>
+                <a
+                  id="pdf-ppr1"
+                  class="download-link"
+                  href="Source/Project%20Progress%20Report.pdf"
+                  download="Project Progress Report.pdf"
+                  data-i18n="label_download_pdf"
+                >Download PDF</a>
+                <p class="task-video-label" data-i18n="label_watch_video">Watch Video</p>
+                <video
+                  id="video-ppr1"
+                  class="progress-inline-video"
+                  controls
+                  preload="metadata"
+                >
+                  <source id="video-src-ppr1" src="Source/Project_Progress_Report.mp4" type="video/mp4">
+                  <span data-i18n="video_not_supported">Your browser does not support the video tag.</span>
+                </video>
+              </td>
               <td><span class="old-date" data-i18n="prog_r2_d1">April 7, 2026</span> <span class="new-date" data-i18n="prog_r2_d2">April 14, 2026</span></td>
             </tr>
             <tr>
-              <td data-i18n="prog_r3_task">Project Progress Updates 2</td>
+              <td><a class="progress-jump-link" href="#progress-update-2" data-i18n="prog_r3_task">Project Progress Updates 2</a></td>
               <td data-i18n="prog_r3_d1">May 5, 2026</td>
             </tr>
             <tr>
@@ -76,11 +100,11 @@
               <td data-i18n="prog_r4_d1">June 1, 2026</td>
             </tr>
             <tr>
-              <td data-i18n="prog_r5_task">Project Progress Updates 3</td>
+              <td><a class="progress-jump-link" href="#progress-update-3" data-i18n="prog_r5_task">Project Progress Updates 3</a></td>
               <td data-i18n="prog_r5_d1">June 16, 2026</td>
             </tr>
             <tr>
-              <td data-i18n="prog_r6_task">Project Progress Updates 4</td>
+              <td><a class="progress-jump-link" href="#progress-update-4" data-i18n="prog_r6_task">Project Progress Updates 4</a></td>
               <td data-i18n="prog_r6_d1">July 6, 2026</td>
             </tr>
             <tr>
@@ -111,6 +135,40 @@
           </tbody>
         </table>
       </div>
+
+      <section id="progress-update-gallery" class="progress-gallery">
+        <h3 data-i18n="progress_gallery_title">Project Progress Update Gallery</h3>
+        <p class="hint" data-i18n="progress_gallery_hint">Screenshots and materials for project progress updates.</p>
+        <h4 id="progress-update-1" class="progress-subtopic" data-i18n="progress_update_1_topic">Project Progress Updates 1</h4>
+        <div class="progress-gallery-grid">
+          <figure class="progress-gallery-item">
+            <img src="IMG/update1/admin%20panel.png" alt="admin panel screenshot" loading="lazy">
+            <figcaption>admin panel.png</figcaption>
+          </figure>
+          <figure class="progress-gallery-item">
+            <img src="IMG/update1/AI%20evaluation%20report.png" alt="AI evaluation report screenshot" loading="lazy">
+            <figcaption>AI evaluation report.png</figcaption>
+          </figure>
+          <figure class="progress-gallery-item">
+            <img src="IMG/update1/conversation.png" alt="conversation screenshot" loading="lazy">
+            <figcaption>conversation.png</figcaption>
+          </figure>
+          <figure class="progress-gallery-item">
+            <img src="IMG/update1/interview%20score%20report.png" alt="interview score report screenshot" loading="lazy">
+            <figcaption>interview score report.png</figcaption>
+          </figure>
+          <figure class="progress-gallery-item">
+            <img src="IMG/update1/interviewee.png" alt="interviewee screenshot" loading="lazy">
+            <figcaption>interviewee.png</figcaption>
+          </figure>
+        </div>
+        <h4 id="progress-update-2" class="progress-subtopic" data-i18n="progress_update_2_topic">Project Progress Updates 2</h4>
+        <p class="progress-pending-note" data-i18n="progress_pending_desc">Pending update. Content and screenshots will be uploaded soon.</p>
+        <h4 id="progress-update-3" class="progress-subtopic" data-i18n="progress_update_3_topic">Project Progress Updates 3</h4>
+        <p class="progress-pending-note" data-i18n="progress_pending_desc">Pending update. Content and screenshots will be uploaded soon.</p>
+        <h4 id="progress-update-4" class="progress-subtopic" data-i18n="progress_update_4_topic">Project Progress Updates 4</h4>
+        <p class="progress-pending-note" data-i18n="progress_pending_desc">Pending update. Content and screenshots will be uploaded soon.</p>
+      </section>
     </section>
   </main>
 
@@ -141,6 +199,16 @@
       var a = document.getElementById("pdf-dpp");
       if (a && typeof window.fypAsset === "function") {
         a.href = fypAsset("Source/Detailed%20Project%20Proposal.pdf");
+      }
+      var b = document.getElementById("pdf-ppr1");
+      if (b && typeof window.fypAsset === "function") {
+        b.href = fypAsset("Source/Project%20Progress%20Report.pdf");
+      }
+      var v = document.getElementById("video-src-ppr1");
+      var vp = document.getElementById("video-ppr1");
+      if (v && vp && typeof window.fypAsset === "function") {
+        v.src = fypAsset("Source/Project_Progress_Report.mp4");
+        vp.load();
       }
     });
   </script>

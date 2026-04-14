@@ -153,6 +153,15 @@
       prog_r1_d2: "March 27, 2026",
 
       label_download_pdf: "Download PDF",
+      label_watch_video: "Watch Video",
+      video_not_supported: "Your browser does not support the video tag.",
+      progress_gallery_title: "Project Progress Update Gallery",
+      progress_gallery_hint: "Screenshots and materials for project progress updates.",
+      progress_update_1_topic: "Project Progress Updates 1",
+      progress_update_2_topic: "Project Progress Updates 2",
+      progress_update_3_topic: "Project Progress Updates 3",
+      progress_update_4_topic: "Project Progress Updates 4",
+      progress_pending_desc: "Pending update. Content and screenshots will be uploaded soon.",
 
       prog_r2_task: "Project Progress Updates 1",
 
@@ -327,6 +336,15 @@
       prog_r1_d2: "2026 年 3 月 27 日",
 
       label_download_pdf: "下載 PDF",
+      label_watch_video: "觀看影片",
+      video_not_supported: "你的瀏覽器不支援影片播放。",
+      progress_gallery_title: "專題進度更新展示",
+      progress_gallery_hint: "專題進度更新的截圖與相關內容。",
+      progress_update_1_topic: "專題進度更新 1",
+      progress_update_2_topic: "專題進度更新 2",
+      progress_update_3_topic: "專題進度更新 3",
+      progress_update_4_topic: "專題進度更新 4",
+      progress_pending_desc: "尚待更新，內容與截圖將稍後上傳。",
 
       prog_r2_task: "專題進度更新 1",
 
@@ -501,6 +519,15 @@
       prog_r1_d2: "2026 年 3 月 27 日",
 
       label_download_pdf: "下载 PDF",
+      label_watch_video: "观看视频",
+      video_not_supported: "你的浏览器不支持视频播放。",
+      progress_gallery_title: "专题进度更新展示",
+      progress_gallery_hint: "专题进度更新的截图与相关内容。",
+      progress_update_1_topic: "专题进度更新 1",
+      progress_update_2_topic: "专题进度更新 2",
+      progress_update_3_topic: "专题进度更新 3",
+      progress_update_4_topic: "专题进度更新 4",
+      progress_pending_desc: "待更新，内容与截图将稍后上传。",
 
       prog_r2_task: "专题进度更新 1",
 
