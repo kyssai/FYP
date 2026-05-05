@@ -97,7 +97,16 @@
               <td><span class="old-date" data-i18n="prog_r2_d1">April 7, 2026</span> <span class="new-date" data-i18n="prog_r2_d2">April 14, 2026</span></td>
             </tr>
             <tr>
-              <td><a class="progress-jump-link" href="#progress-update-2" data-i18n="prog_r3_task">Project Progress Updates 2</a></td>
+              <td class="task-cell">
+                <a class="task-title progress-jump-link" href="#progress-update-2" data-i18n="prog_r3_task">Project Progress Updates 2</a>
+                <a
+                  id="pdf-ppr2"
+                  class="download-link"
+                  href="Source/Project%20Progress%20Updates%202.pdf"
+                  download="Project Progress Updates 2.pdf"
+                  data-i18n="label_download_pdf"
+                >Download PDF</a>
+              </td>
               <td data-i18n="prog_r3_d1">May 5, 2026</td>
             </tr>
             <tr>
@@ -168,7 +177,12 @@
           </figure>
         </div>
         <h4 id="progress-update-2" class="progress-subtopic" data-i18n="progress_update_2_topic">Project Progress Updates 2</h4>
-        <p class="progress-pending-note" data-i18n="progress_pending_desc">Pending update. Content and screenshots will be uploaded soon.</p>
+        <div class="progress-gallery-grid progress-gallery-grid-single">
+          <figure class="progress-gallery-item progress-gallery-item-single">
+            <img src="IMG/update2/update2.png" alt="project progress updates 2 screenshot" loading="lazy">
+            <figcaption>update2.png</figcaption>
+          </figure>
+        </div>
         <h4 id="progress-update-3" class="progress-subtopic" data-i18n="progress_update_3_topic">Project Progress Updates 3</h4>
         <p class="progress-pending-note" data-i18n="progress_pending_desc">Pending update. Content and screenshots will be uploaded soon.</p>
         <h4 id="progress-update-4" class="progress-subtopic" data-i18n="progress_update_4_topic">Project Progress Updates 4</h4>
@@ -208,6 +222,10 @@
       var b = document.getElementById("pdf-ppr1");
       if (b && typeof window.fypAsset === "function") {
         b.href = fypAsset("Source/Project%20Progress%20Report.pdf");
+      }
+      var c = document.getElementById("pdf-ppr2");
+      if (c && typeof window.fypAsset === "function") {
+        c.href = fypAsset("Source/Project%20Progress%20Updates%202.pdf");
       }
       var v = document.getElementById("video-src-ppr1");
       var vp = document.getElementById("video-ppr1");

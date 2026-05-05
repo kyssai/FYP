@@ -46,3 +46,17 @@ window.FYP_SITE_BASE = "/myproject";  // 依實際子路徑調整，不要結尾
 
 1. `Source/Detailed Project Proposal.pdf` 已上傳且檔名一致（含空格）。
 2. 用瀏覽器開啟線上 `progress.html`，按右鍵「在新分頁開啟」PDF 連結，確認網址無 404。
+
+---
+
+## 上線後圖片變得「超大」、本機卻正常？
+
+常見原因：
+
+1. **`styles.css` 沒載入**（路徑錯誤、檔名大小寫不同）  
+   - Linux 主機**區分大小寫**：請確認上傳檔名為 **`styles.css`**（全小寫），與 HTML 裡 `href="styles.css"` 一致。  
+   - 在瀏覽器按 **F12 → Network**，重新整理，看 `styles.css` 是否 **200**（不是 404）。
+
+2. **已加入備援**：每頁 `<head>` 內有一段內嵌樣式，即使 CSS 偶發失敗也會限制圖片寬度；`styles.css` 內亦設有 **`min-width: 0`** 於雙欄區塊，避免大圖撐破版面。
+
+若仍異常，請確認 **`IMG/`** 內圖檔已完整上傳，且與本機結構相同。
